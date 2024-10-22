@@ -1,0 +1,30 @@
+{
+  "name": "template-mvc-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "ts-node-dev --respawn --transpile-only --env-file=.env.development src/index.ts",
+    "start:debug": "set NODE_ENV=debug && ts-node-dev --respawn --transpile-only --env-file=.env.development src/index.ts",
+    "start:prod": "tsc && node --env-file=.env.production build/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/pg": "^8.11.10",
+    "ts-node-dev": "^2.0.0",
+    "ts-standard": "^12.0.2",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "pg": "^8.13.0",
+    "winston": "^3.15.0"
+  }
+}

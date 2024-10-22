@@ -1,0 +1,31 @@
+{
+  "name": "app-template-creator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": {
+    "create-project-template": "index.js"
+  },
+  "files": [
+    "build",
+    "packages-*",
+    "index.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "tsc && node build/src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@types/node": "^22.7.7",
+    "@types/prompts": "^2.4.9",
+    "inquirer": "^12.0.0",
+    "prompts": "^2.4.2"
+  }
+}
