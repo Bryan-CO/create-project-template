@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express'
 import { StatusCodes } from 'http-status-codes'
-import { ResponseModel } from '../response/ResponseModel'
+import { ResponseModel } from '../responses/ResponseModel'
 
 export const errorHandler = (
   err: any,

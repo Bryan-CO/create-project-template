@@ -103,12 +103,20 @@ const backOptions : BackArchitecture[] = [
     fs.mkdirSync(destDir, { recursive: true })
     fs.readdirSync(srcDir).forEach(file => {
         const srcFile = path.resolve(srcDir, file)
-        const destFile = path.resolve(destDir, file)
+        const destFile = path.resolve(destDir, renameFiles[file] ?? file)
         const stat = fs.statSync(srcFile)
         if (stat.isDirectory()) {
             copyDir(srcFile, destFile)
         } else {
-            fs.copyFileSync(srcFile, destFile)
+            !ignoreFiles.includes(file) && fs.copyFileSync(srcFile, destFile)
         }
     })
   }
+
+  const renameFiles: Record<string, string> = {
+    _gitignore: '.gitignore'
+  }
+
+  const ignoreFiles: string[] = [
+    '.gitkeep'
+  ]
