@@ -1,13 +1,13 @@
 {
-  "name": "app-template-creator",
+  "name": "app-template-builder",
   "version": "1.0.0",
   "main": "index.js",
   "bin": {
-    "create-project-template": "index.js"
+    "app-template-builder": "index.js"
   },
   "files": [
     "build",
-    "packages-*",
+    "packages/*",
     "index.js"
   ],
   "scripts": {
